@@ -1,15 +1,18 @@
 import java.util.Scanner;
 
-public class  evenoddarray{
+public class AvgSum {
 
-    public static void evenodd(int arr[]) {
+    public static void sum(int arr[]) {
+        int sum = 0;
+
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 == 0) {
-                System.out.println(arr[i] + " = Even");
-            } else {
-                System.out.println(arr[i] + " = Odd");
-            }
+            sum = sum + arr[i];
         }
+
+        double avg = (double) sum / arr.length;
+
+        System.out.println("Sum = " + sum);
+        System.out.println("Average = " + avg);
     }
 
     public static void main(String[] args) {
@@ -25,6 +28,6 @@ public class  evenoddarray{
             arr[i] = sc.nextInt();
         }
 
-        evenodd(arr);
+        sum(arr);
     }
 }

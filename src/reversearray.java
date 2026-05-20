@@ -1,14 +1,10 @@
 import java.util.Scanner;
 
-public class  evenoddarray{
+public class reversearray {
 
-    public static void evenodd(int arr[]) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 == 0) {
-                System.out.println(arr[i] + " = Even");
-            } else {
-                System.out.println(arr[i] + " = Odd");
-            }
+    public static void reverse(int arr[]) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.println(arr[i]);
         }
     }
 
@@ -25,6 +21,7 @@ public class  evenoddarray{
             arr[i] = sc.nextInt();
         }
 
-        evenodd(arr);
+        System.out.println("Reversed array:");
+        reverse(arr);
     }
 }
